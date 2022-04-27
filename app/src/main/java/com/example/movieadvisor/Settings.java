@@ -25,6 +25,7 @@ public class Settings extends AppCompatActivity {
         SettingsName = (TextView) findViewById(R.id.name5);
         SettingsPlace = (TextView) findViewById(R.id.area5);
 
+        //sets user information
         SettingsName.setText("ID: "+ UserInformation.getInstance().returnName());
         SettingsPlace.setText("Area: " + UserInformation.getInstance().returnPlace());
 
@@ -34,6 +35,7 @@ public class Settings extends AppCompatActivity {
         name.setText(UserInformation.getInstance().returnName());
         place.setText(UserInformation.getInstance().returnPlace());
 
+        //adds items to sidmenu
         String[] arraySpinner = new String[] {
                 getString(R.string.findmovie5), getString(R.string.moc5), getString(R.string.sm5), getString(R.string.imdb5), getString(R.string.settings5), getString(R.string.so5)
         };
@@ -61,7 +63,7 @@ public class Settings extends AppCompatActivity {
                     startActivity(intent);
                 }if (i==5) {
                     IdInformation.getInstance().change(4);
-                    Intent intent = new Intent(Settings.this, MainActivity.class);
+                    Intent intent = new Intent(Settings.this, Start.class);
                     startActivity(intent);
                 }
 
@@ -75,6 +77,7 @@ public class Settings extends AppCompatActivity {
         });
     }
 
+    //sets user information
     public void testFunction(View v) {
         String input = name.getText().toString();
         String input2 = place.getText().toString();

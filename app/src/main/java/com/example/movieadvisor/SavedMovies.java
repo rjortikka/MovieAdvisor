@@ -22,9 +22,11 @@ public class SavedMovies extends AppCompatActivity {
         SavedMoviesName = (TextView) findViewById(R.id.name3);
         SavedMoviesPlace = (TextView) findViewById(R.id.area3);
 
+        //sets user information
         SavedMoviesName.setText("ID: "+ UserInformation.getInstance().returnName());
         SavedMoviesPlace.setText("Area: " + UserInformation.getInstance().returnPlace());
 
+        //adds items to sidemenu
         String[] arraySpinner = new String[] {
                 getString(R.string.findmovie3), getString(R.string.moc3), getString(R.string.sm3), getString(R.string.imdb3), getString(R.string.settings3), getString(R.string.so3)
         };
@@ -52,7 +54,7 @@ public class SavedMovies extends AppCompatActivity {
                     startActivity(intent);
                 }if (i==5) {
                     IdInformation.getInstance().change(2);
-                    Intent intent = new Intent(SavedMovies.this, MainActivity.class);
+                    Intent intent = new Intent(SavedMovies.this, Start.class);
                     startActivity(intent);
                 }
 

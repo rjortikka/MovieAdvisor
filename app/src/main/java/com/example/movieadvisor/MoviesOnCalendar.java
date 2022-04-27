@@ -22,9 +22,11 @@ public class MoviesOnCalendar extends AppCompatActivity {
         MOCName = (TextView) findViewById(R.id.name2);
         MOCPlace = (TextView) findViewById(R.id.area2);
 
+        //sets user information
         MOCName.setText("ID: "+ UserInformation.getInstance().returnName());
         MOCPlace.setText("Area: " + UserInformation.getInstance().returnPlace());
 
+        //adds items to sidemenu
         String[] arraySpinner = new String[] {
                 getString(R.string.findmovie2), getString(R.string.moc2), getString(R.string.sm2), getString(R.string.imdb2), getString(R.string.settings2), getString(R.string.so2)
         };
@@ -52,7 +54,7 @@ public class MoviesOnCalendar extends AppCompatActivity {
                     startActivity(intent);
                 }if (i==5) {
                     IdInformation.getInstance().change(1);
-                    Intent intent = new Intent(MoviesOnCalendar.this, MainActivity.class);
+                    Intent intent = new Intent(MoviesOnCalendar.this, Start.class);
                     startActivity(intent);
                 }
 

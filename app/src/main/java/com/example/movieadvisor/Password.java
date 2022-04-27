@@ -17,6 +17,7 @@ public class Password extends AppCompatActivity {
     }
 
     public void loadActivity(View v) {
+        //uses activity to remember last activity
         activity = IdInformation.getInstance().returnId();
         if (activity == 0) {
             Intent intent = new Intent(Password.this, SearchMovies.class);

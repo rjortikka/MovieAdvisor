@@ -44,9 +44,11 @@ public class IMDB extends AppCompatActivity {
         IMDBName = (TextView) findViewById(R.id.name4);
         IMDBPlace = (TextView) findViewById(R.id.area4);
 
+        //setting user information
         IMDBName.setText("ID: "+ UserInformation.getInstance().returnName());
         IMDBPlace.setText("Area: " + UserInformation.getInstance().returnPlace());
 
+        //adding option to sidemenu
         String[] arraySpinner = new String[] {
                 getString(R.string.findmovie4), getString(R.string.moc4), getString(R.string.sm4), getString(R.string.imdb4), getString(R.string.settings4), getString(R.string.so4)
         };
@@ -74,7 +76,7 @@ public class IMDB extends AppCompatActivity {
                     startActivity(intent);
                 }if (i==5) {
                     IdInformation.getInstance().change(3);
-                    Intent intent = new Intent(IMDB.this, MainActivity.class);
+                    Intent intent = new Intent(IMDB.this, Start.class);
                     startActivity(intent);
                 }
 
@@ -87,6 +89,8 @@ public class IMDB extends AppCompatActivity {
             }
         });
     }
+
+    //uses getJSON and getJSONRating to find the id using the title and then finding the rating using the id
     public void readJSON(View v) {
         String json = getJSON();
         System.out.println("JSON " + json);
@@ -143,6 +147,7 @@ public class IMDB extends AppCompatActivity {
         }
     }
 
+    //uses the input to find the right json
     public String getJSON() {
         String response = null;
         try {
@@ -167,7 +172,7 @@ public class IMDB extends AppCompatActivity {
         }
         return response;
     }
-
+    //uses id to find the rating
     public String getJSONRating(String id) throws JSONException {
         String response = null;
         try {

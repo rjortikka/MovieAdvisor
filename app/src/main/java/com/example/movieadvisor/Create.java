@@ -15,7 +15,7 @@ public class Create extends AppCompatActivity {
     }
 
     public void loadActivity(View v) {
-        Intent intent = new Intent(Create.this, MainActivity.class);
+        Intent intent = new Intent(Create.this, Start.class);
         startActivity(intent);
     }
 }

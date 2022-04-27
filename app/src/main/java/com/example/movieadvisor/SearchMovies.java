@@ -85,7 +85,7 @@ public class SearchMovies extends AppCompatActivity implements AdapterView.OnIte
                     startActivity(intent);
                 }if (i==5) {
                     IdInformation.getInstance().change(0);
-                    Intent intent = new Intent(SearchMovies.this, MainActivity.class);
+                    Intent intent = new Intent(SearchMovies.this, Start.class);
                     startActivity(intent);
                 }
 

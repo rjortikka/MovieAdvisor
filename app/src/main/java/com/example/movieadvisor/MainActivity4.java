@@ -21,12 +21,22 @@ public class MainActivity4 extends AppCompatActivity implements AdapterView.OnIt
     RecyclerView listrates;
     TheatreInfo ti=TheatreInfo.getInstance();
 
+    TextView Name4;
+    TextView Area4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
         Context context=MainActivity4.this;
+
+        Name4 = (TextView) findViewById(R.id.name222);
+        Area4 = (TextView) findViewById(R.id.area222);
+
+        //sets user information
+        Name4.setText("ID: "+ UserInformation.getInstance().returnName());
+        Area4.setText("Area: " + UserInformation.getInstance().returnPlace());
 
         movienameforlist = findViewById(R.id.namelm);
         Button list = findViewById(R.id.list2);

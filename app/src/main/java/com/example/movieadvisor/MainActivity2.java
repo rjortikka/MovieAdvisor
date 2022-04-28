@@ -15,6 +15,9 @@ import android.widget.TextView;
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class MainActivity2 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    TextView Name2;
+    TextView Area2;
+
     TextView movieoncalendar;
     TextView datetimeoncalendar;
     TextView placeoncalendar;
@@ -26,6 +29,13 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         Context context = MainActivity2.this;
+
+        Name2 = (TextView) findViewById(R.id.name333);
+        Area2 = (TextView) findViewById(R.id.area333);
+
+        //sets user information
+        Name2.setText("ID: "+ UserInformation.getInstance().returnName());
+        Area2.setText("Area: " + UserInformation.getInstance().returnPlace());
 
 
         movieoncalendar = findViewById(R.id.movieonc);

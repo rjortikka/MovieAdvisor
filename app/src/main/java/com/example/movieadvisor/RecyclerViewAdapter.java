@@ -17,6 +17,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     ArrayList<String> movietimelist;
     ArrayList<String> movieplacelist;
     Context context;
+    //
 
     public RecyclerViewAdapter(Context ct, ArrayList<String> mnl, ArrayList<String> mtl, ArrayList<String> mpl){
         context=ct;

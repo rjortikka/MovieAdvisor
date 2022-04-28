@@ -21,7 +21,7 @@ import android.widget.Toast;
 @RequiresApi(api = Build.VERSION_CODES.O)
 public class FindMovie extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
-
+//
     EditText moviename;
     EditText latesttime;
     EditText date;

@@ -38,6 +38,7 @@ public class Start extends AppCompatActivity {
         setContentView(R.layout.activity_start);
 
         activity = IdInformation.getInstance().returnId();
+        //
 
         eUsername = findViewById(R.id.username);
         ePassword = findViewById(R.id.password);

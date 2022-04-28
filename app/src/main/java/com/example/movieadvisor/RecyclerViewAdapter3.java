@@ -20,6 +20,7 @@ public class RecyclerViewAdapter3 extends RecyclerView.Adapter<RecyclerViewAdapt
     ArrayList<String> movielistname;
 
     Context context;
+    //
 
     public RecyclerViewAdapter3(Context ct, ArrayList<String> mln){
         context=ct;

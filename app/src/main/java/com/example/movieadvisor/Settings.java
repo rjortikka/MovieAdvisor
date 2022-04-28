@@ -34,6 +34,7 @@ public class Settings extends AppCompatActivity {
 
         name.setText(UserInformation.getInstance().returnName());
         place.setText(UserInformation.getInstance().returnPlace());
+        //
 
         //adds items to sidmenu
         String[] arraySpinner = new String[] {

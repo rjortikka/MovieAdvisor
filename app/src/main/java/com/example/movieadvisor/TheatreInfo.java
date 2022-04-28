@@ -151,6 +151,7 @@ public class TheatreInfo {
             date1=dtf.format(now);
         }
         // Report if the earliest time is in the wrong format
+        //
         if(startingtime.length()>0) {
             try {
                 starttime = LocalTime.parse(startingtime, DateTimeFormatter.ofPattern("HH:mm"));

@@ -9,6 +9,7 @@ import android.view.View;
 public class Password extends AppCompatActivity {
 
     int activity = 0;
+    //
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

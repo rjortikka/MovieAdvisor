@@ -6,6 +6,7 @@ public class UserInformation {
     String place = "unknown";
 
     //This class holds the user information to be put on display on different activities
+    //
 
     public static UserInformation getInstance() {
         if (userInformation == null) {

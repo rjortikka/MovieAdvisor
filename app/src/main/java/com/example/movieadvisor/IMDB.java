@@ -58,6 +58,7 @@ public class IMDB extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s.setAdapter(adapter);
         s.setSelection(3);
+        //
 
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override

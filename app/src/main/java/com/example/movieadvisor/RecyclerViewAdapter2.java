@@ -23,6 +23,7 @@ public class RecyclerViewAdapter2 extends RecyclerView.Adapter<RecyclerViewAdapt
     ArrayList<String> listmovieplace;
     Context context;
     TheatreInfo ti=TheatreInfo.getInstance();
+    //
 
     public RecyclerViewAdapter2(Context ct, ArrayList<String> lmn, ArrayList<String> lmt, ArrayList<String> lmp){
         context=ct;

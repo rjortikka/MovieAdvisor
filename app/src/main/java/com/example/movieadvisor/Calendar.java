@@ -42,6 +42,7 @@ public class Calendar extends AppCompatActivity implements AdapterView.OnItemSel
         datetimeoncalendar = findViewById(R.id.dateonc);
         placeoncalendar = findViewById(R.id.theatreonc);
         movieinformation=findViewById(R.id.movieinfooc);
+        //
 
         RecyclerViewAdapter2 RecyclerViewAdapter2 = new RecyclerViewAdapter2(this,ti.namestorage,ti.timestorage, ti.placestorage);
         movieinformation.setAdapter(RecyclerViewAdapter2);

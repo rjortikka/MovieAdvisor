@@ -5,6 +5,7 @@ public class IdInformation {
 
     private static IdInformation idInformation = null;
     int id = 0;
+    //
 
     public static IdInformation getInstance() {
         if (idInformation == null) {

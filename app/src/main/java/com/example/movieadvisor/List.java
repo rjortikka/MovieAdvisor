@@ -23,6 +23,7 @@ public class List extends AppCompatActivity implements AdapterView.OnItemSelecte
 
     TextView Name4;
     TextView Area4;
+    //
 
 
     @Override

@@ -47,6 +47,7 @@ public class Create extends AppCompatActivity {
         eRegister = findViewById(R.id.register_btn);
 
         //remember last screen where user was
+        //
 
         credentials = new Credentials();
 

@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/register_text"
-        android:text="Register new account"
+        android:text="@string/register_new_account"
         android:textColor="@color/purple_700"
         android:textSize="25dp"
         android:layout_margin="50dp"
@@ -32,7 +32,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#E5E3E8"
-        android:hint="Username"
+        android:hint="@string/usernameCreate"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
@@ -47,7 +47,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#E5E3E8"
-        android:hint="Password"
+        android:hint="@string/passwordCreate"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
@@ -63,7 +63,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:backgroundTint="@color/purple_700"
-        android:text="Register" />
+        android:text="@string/register" />
 
 
 

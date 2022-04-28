@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/signin"
-        android:text="Sign in"
+        android:text="@string/sign_in"
         android:textColor="@color/purple_700"
         android:textSize="35dp"
         android:layout_margin="50dp"
@@ -28,7 +28,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#E5E3E8"
-        android:hint="Username"
+        android:hint="@string/usernameStart"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
@@ -43,7 +43,7 @@
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
         android:background="#E5E3E8"
-        android:hint="Password"
+        android:hint="@string/passwordStart"
         android:padding="20dp"
         android:textColor="@color/black"
         android:textColorHint="@color/black" />
@@ -71,7 +71,7 @@
         android:layout_marginTop="1dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
-        android:text="Create account"
+        android:text="@string/create_accountStart"
         android:textColor="#2196F3" />
 
     <CheckBox
@@ -86,7 +86,7 @@
         android:layout_marginTop="36dp"
         android:layout_marginEnd="223dp"
         android:layout_marginBottom="-69dp"
-        android:text="Remember me" />
+        android:text="@string/remember_me" />
 
 
 </RelativeLayout>

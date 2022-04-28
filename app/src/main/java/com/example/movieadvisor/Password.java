@@ -20,7 +20,7 @@ public class Password extends AppCompatActivity {
         //uses activity to remember last activity
         activity = IdInformation.getInstance().returnId();
         if (activity == 0) {
-            Intent intent = new Intent(Password.this, SearchMovies.class);
+            Intent intent = new Intent(Password.this, MainActivity.class);
             startActivity(intent);
         } else if (activity == 1) {
             Intent intent = new Intent(Password.this, MoviesOnCalendar.class);

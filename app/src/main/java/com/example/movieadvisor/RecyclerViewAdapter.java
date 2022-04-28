@@ -18,11 +18,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     ArrayList<String> movieplacelist;
     Context context;
 
-    public RecyclerViewAdapter(Context ct, ArrayList<String> ln, ArrayList<String> la, ArrayList<String> lp){
+    public RecyclerViewAdapter(Context ct, ArrayList<String> mnl, ArrayList<String> mtl, ArrayList<String> mpl){
         context=ct;
-        movienamelist=ln;
-        movietimelist=la;
-        movieplacelist=lp;
+        movienamelist=mnl;
+        movietimelist=mtl;
+        movieplacelist=mpl;
     }
     @NonNull
     @Override
@@ -55,4 +55,5 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         }
     }
 }
+
 

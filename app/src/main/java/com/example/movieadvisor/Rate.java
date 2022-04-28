@@ -7,7 +7,7 @@ public class Rate {
     public Rate (String ch, double n){
         text=ch;
         rate=n;
-        //
+        ///
     }
 
     public String toString(){return text;}

@@ -24,6 +24,8 @@ public class Start extends AppCompatActivity {
 
     boolean isValid = false;
 
+    int activity = 0;
+
     public Credentials credentials;
 
     SharedPreferences sharedPreferences;
@@ -34,6 +36,8 @@ public class Start extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        activity = IdInformation.getInstance().returnId();
 
         eUsername = findViewById(R.id.username);
         ePassword = findViewById(R.id.password);
@@ -102,8 +106,18 @@ public class Start extends AppCompatActivity {
 
                         sharedPreferencesEditor.apply();
 
-                        startActivity(new Intent(Start.this, FindMovie.class));
-                        // go to the next activity
+                        // Go to Login Activity
+                        if (activity == 0) {
+                            startActivity(new Intent(Start.this, FindMovie.class));
+                        } else if (activity == 1) {
+                            startActivity(new Intent(Start.this, Calendar.class));
+                        } else if (activity == 2) {
+                            startActivity(new Intent(Start.this, List.class));
+                        } else if (activity == 3) {
+                            startActivity(new Intent(Start.this, IMDB.class));
+                        } else if (activity == 4) {
+                            startActivity(new Intent(Start.this, Settings.class));
+                        }
 
                     }
                 }

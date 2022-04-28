@@ -19,6 +19,7 @@ public class Create extends AppCompatActivity {
     private EditText eRegPassword;
     private Button eRegister;
 
+
     private static final Pattern PASSWORD_PATTERN =
             Pattern.compile("^" +
                     "(?=.*[0-9])" +         //at least 1 number
@@ -44,6 +45,8 @@ public class Create extends AppCompatActivity {
         eRegUsername = findViewById(R.id.reg_username);
         eRegPassword = findViewById(R.id.reg_password);
         eRegister = findViewById(R.id.register_btn);
+
+        //remember last screen where user was
 
         credentials = new Credentials();
 
@@ -89,7 +92,10 @@ public class Create extends AppCompatActivity {
                         Toast.makeText(Create.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
 
                         // Go to Login Activity
+
                         startActivity(new Intent(Create.this, Start.class));
+
+
                     }
                 }
             }

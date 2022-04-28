@@ -20,13 +20,13 @@ public class Password extends AppCompatActivity {
         //uses activity to remember last activity
         activity = IdInformation.getInstance().returnId();
         if (activity == 0) {
-            Intent intent = new Intent(Password.this, MainActivity.class);
+            Intent intent = new Intent(Password.this, FindMovie.class);
             startActivity(intent);
         } else if (activity == 1) {
-            Intent intent = new Intent(Password.this, MoviesOnCalendar.class);
+            Intent intent = new Intent(Password.this, Calendar.class);
             startActivity(intent);
         } else if (activity == 2) {
-            Intent intent = new Intent(Password.this, SavedMovies.class);
+            Intent intent = new Intent(Password.this, List.class);
             startActivity(intent);
         } else if (activity == 3) {
             Intent intent = new Intent(Password.this, IMDB.class);

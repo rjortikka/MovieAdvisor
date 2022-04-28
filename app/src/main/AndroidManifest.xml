@@ -13,28 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MovieAdvisor">
         <activity
-            android:name=".MainActivity4"
+            android:name=".List"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".Calendar"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".FindMovie"
             android:exported="false" />
         <activity
             android:name=".Settings"
             android:exported="false" />
         <activity
             android:name=".IMDB"
-            android:exported="false" />
-        <activity
-            android:name=".SavedMovies"
-            android:exported="false" />
-        <activity
-            android:name=".MoviesOnCalendar"
-            android:exported="false" />
-        <activity
-            android:name=".SearchMovies"
             android:exported="false" />
         <activity
             android:name=".Create"

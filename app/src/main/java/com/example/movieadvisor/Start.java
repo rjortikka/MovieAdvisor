@@ -44,6 +44,7 @@ public class Start extends AppCompatActivity {
         credentials = new Credentials();
 
         // check if the user credentials already exist and are saved to the file
+        // if they are saved get them form the file
         sharedPreferences = getApplicationContext().getSharedPreferences("CredentialsDB", MODE_PRIVATE);
         sharedPreferencesEditor = sharedPreferences.edit();
 
@@ -58,7 +59,7 @@ public class Start extends AppCompatActivity {
             String savedUsername = sharedPreferences.getString("LastSavedUsername", "");
             String savedPassword = sharedPreferences.getString("LastSavedPassword", "");
 
-
+            // check if user has pressed the Remember me
             if(sharedPreferences.getBoolean("RememberMeCheckbox", false)) {
                 eUsername.setText(savedUsername);
                 ePassword.setText(savedPassword);
@@ -93,7 +94,7 @@ public class Start extends AppCompatActivity {
                         Toast.makeText(Start.this, "Login was successful!", Toast.LENGTH_SHORT).show();
 
                         sharedPreferencesEditor.putBoolean("RememberMeCheckbox", eCheckBox.isChecked());
-
+                        // save new information to the file
                         sharedPreferencesEditor.apply();
 
                         sharedPreferencesEditor.putString("LastSavedUsername", inputUsername);
@@ -101,8 +102,8 @@ public class Start extends AppCompatActivity {
 
                         sharedPreferencesEditor.apply();
 
-                        startActivity(new Intent(Start.this, MainActivity.class));
-                        // code to go to the next activity
+                        startActivity(new Intent(Start.this, FindMovie.class));
+                        // go to the next activity
 
                     }
                 }

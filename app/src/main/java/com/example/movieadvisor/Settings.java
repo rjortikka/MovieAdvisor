@@ -50,13 +50,13 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i==0) {
-                    Intent intent = new Intent(Settings.this, MainActivity.class);
+                    Intent intent = new Intent(Settings.this, FindMovie.class);
                     startActivity(intent);
                 } if (i==1) {
-                    Intent intent = new Intent(Settings.this, MainActivity2.class);
+                    Intent intent = new Intent(Settings.this, Calendar.class);
                     startActivity(intent);
                 } if (i==2) {
-                    Intent intent = new Intent(Settings.this, MainActivity4.class);
+                    Intent intent = new Intent(Settings.this, List.class);
                     startActivity(intent);
                 } if (i==3) {
                     Intent intent = new Intent(Settings.this, IMDB.class);

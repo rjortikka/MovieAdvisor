@@ -65,11 +65,11 @@ public class Create extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                /* Obtain the inputs from the fields */
+                // obtain the inputs from the fields
                 String registeredName = eRegUsername.getText().toString();
                 String registeredPassword = eRegPassword.getText().toString();
 
-                /* Check if the username is available and unique */
+                // Check if the username is available and unique
                 if(validate(registeredName, registeredPassword)) {
 
                     if(credentials.checkUsername(registeredName)){
@@ -88,7 +88,7 @@ public class Create extends AppCompatActivity {
 
                         Toast.makeText(Create.this, "Registration Successful!", Toast.LENGTH_SHORT).show();
 
-                        /* Go to Login Activity */
+                        // Go to Login Activity
                         startActivity(new Intent(Create.this, Start.class));
                     }
                 }
@@ -98,7 +98,7 @@ public class Create extends AppCompatActivity {
     }
     boolean validate(String name, String password)
     {
-        /* Check if the name is empty and password field is 8 characters long */
+        // if the name and password are empty
         if(name.isEmpty() || password.isEmpty())
         {
             Toast.makeText(this, "Field can not be empty!", Toast.LENGTH_SHORT).show();

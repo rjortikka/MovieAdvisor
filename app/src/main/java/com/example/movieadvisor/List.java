@@ -16,7 +16,7 @@ import android.widget.TextView;
 import java.util.Collections;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
-public class MainActivity4 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class List extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     TextView movienameforlist;
     RecyclerView listrates;
     TheatreInfo ti=TheatreInfo.getInstance();
@@ -28,8 +28,8 @@ public class MainActivity4 extends AppCompatActivity implements AdapterView.OnIt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main4);
-        Context context=MainActivity4.this;
+        setContentView(R.layout.activity_list);
+        Context context= List.this;
 
         Name4 = (TextView) findViewById(R.id.name222);
         Area4 = (TextView) findViewById(R.id.area222);

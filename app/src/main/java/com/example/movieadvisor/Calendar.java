@@ -13,7 +13,7 @@ import android.widget.AdapterView;
 import android.widget.TextView;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
-public class MainActivity2 extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class Calendar extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     TextView Name2;
     TextView Area2;
@@ -27,8 +27,8 @@ public class MainActivity2 extends AppCompatActivity implements AdapterView.OnIt
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
-        Context context = MainActivity2.this;
+        setContentView(R.layout.activity_calendar);
+        Context context = Calendar.this;
 
         Name2 = (TextView) findViewById(R.id.name333);
         Area2 = (TextView) findViewById(R.id.area333);

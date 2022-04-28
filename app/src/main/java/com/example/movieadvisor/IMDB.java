@@ -63,13 +63,13 @@ public class IMDB extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i==0) {
-                    Intent intent = new Intent(IMDB.this, MainActivity.class);
+                    Intent intent = new Intent(IMDB.this, FindMovie.class);
                     startActivity(intent);
                 } if (i==1) {
-                    Intent intent = new Intent(IMDB.this, MainActivity2.class);
+                    Intent intent = new Intent(IMDB.this, Calendar.class);
                     startActivity(intent);
                 } if (i==2) {
-                    Intent intent = new Intent(IMDB.this, MainActivity4.class);
+                    Intent intent = new Intent(IMDB.this, List.class);
                     startActivity(intent);
                 } if (i==4) {
                     Intent intent = new Intent(IMDB.this, Settings.class);

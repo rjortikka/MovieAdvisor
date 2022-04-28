@@ -16,11 +16,10 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 @RequiresApi(api = Build.VERSION_CODES.O)
-public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+public class FindMovie extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
 
     EditText moviename;
@@ -38,8 +37,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Context context=MainActivity.this;
+        setContentView(R.layout.activity_findmovie);
+        Context context= FindMovie.this;
 
         //adds items to sidemenu
         String[] arraySpinner = new String[] {
@@ -56,20 +55,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             @Override
             public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
                 if (i==1) {
-                    Intent intent = new Intent(MainActivity.this, MainActivity2.class);
+                    Intent intent = new Intent(FindMovie.this, Calendar.class);
                     startActivity(intent);
                 }if (i==2) {
-                    Intent intent = new Intent(MainActivity.this, MainActivity4.class);
+                    Intent intent = new Intent(FindMovie.this, List.class);
                     startActivity(intent);
                 } if (i==3) {
-                    Intent intent = new Intent(MainActivity.this, IMDB.class);
+                    Intent intent = new Intent(FindMovie.this, IMDB.class);
                     startActivity(intent);
                 } if (i==4) {
-                    Intent intent = new Intent(MainActivity.this, Settings.class);
+                    Intent intent = new Intent(FindMovie.this, Settings.class);
                     startActivity(intent);
                 }if (i==5) {
                     IdInformation.getInstance().change(0);
-                    Intent intent = new Intent(MainActivity.this, Start.class);
+                    Intent intent = new Intent(FindMovie.this, Start.class);
                     startActivity(intent);
                 }
 
@@ -105,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 editor.putString("Movie name", String.valueOf(ti.namelist));
                 editor.putString("Date and time", String.valueOf(ti.timelist));
                 editor.commit();
-                Toast.makeText(MainActivity.this, "Information Saved", Toast.LENGTH_LONG).show();
+                Toast.makeText(FindMovie.this, "Information Saved", Toast.LENGTH_LONG).show();
 
             }
         });
@@ -178,7 +177,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
 
         // Change the calendar view
-        Intent intent = new Intent(MainActivity.this,MainActivity2.class);
+        Intent intent = new Intent(FindMovie.this, Calendar.class);
         startActivity(intent);
 
 
@@ -204,7 +203,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
 
         // Change the saved movies view
-        Intent intent2 = new Intent(MainActivity.this,MainActivity4.class);
+        Intent intent2 = new Intent(FindMovie.this, List.class);
         startActivity(intent2);
 
     }
